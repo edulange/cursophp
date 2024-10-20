@@ -11,6 +11,8 @@
     <h1>
         <?php 
             echo "Hello Wold \u{1F30E}";
+            $r = "2.5" + "2";
+            var_dump($r)
         ?>
     </h1>
     <p>vamos tentar nos livrar da maldição</p>
