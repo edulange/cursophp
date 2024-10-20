@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Interação com Formulários</title>
+        <link rel="stylesheet" href='../style.css'>
+	</head>
+	<body>
+        <header>
+            <h1>Analisador de Número Real!</h1>
+        </header>
+        <section>
+            <form action="cad.php" method="get"> 
+                <!-- action, para onde os dados vão? -->
+                <label for="numero">Digite um número real: </label>
+                <input type="number" name="numero" id="idnumber" step='0.001'>
+                <input type="submit" value="Analisar">
+            </form>
+        </section>
+    </body>
+</html>
