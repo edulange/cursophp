@@ -5,7 +5,7 @@ let emojis = { "in progress": "🔄", "done": "✅", "waiting more information":
 %>
 
 - **Criado em:** <% tp.date.now("YYYY-MM-DD HH:mm") %>
-- **Enviroment:** <%* let env = await tp.system.prompt("Choose the enviroment: dev, QA, prod"; env %>
+- **Enviroment:** <%* let env = await tp.system.prompt("Escolha o enviroment (dev, QA, prod)"); env %>
 - **Status:** #status/<% status %>
 - **Timestamp de Finalização:** <%* 
 if (status === "done") { tp.date.now("YYYY-MM-DD HH:mm") } else { "Ainda não concluído" } %>
