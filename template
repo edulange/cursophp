@@ -1,0 +1,25 @@
+# Ticket: <% tp.file.title %>
+
+- **Criado em:** <% tp.date.now("YYYY-MM-DD HH:mm") %>
+- **Enviroment:** <%* let env = await tp.system.prompt("Escolha o enviroment (dev, QA, prod)"); env %>
+- **Status:** <%* 
+let status = await tp.system.prompt("Escolha o status (in progress, done, waiting more information)");
+let emojis = { "in progress": "🔄", "done": "✅", "waiting more information": "⏳" };
+`${status} ${emojis[status]}` %>
+- **Timestamp de Finalização:** <%* 
+if (status === "done") { tp.date.now("YYYY-MM-DD HH:mm") } else { "Ainda não concluído" } %>
+
+---
+
+### Task
+<%* let task = await tp.system.prompt("Descreva a task brevemente"); task %>
+
+---
+
+### Como eu fiz
+...
+
+---
+
+### Histórico de Atualizações
+<% tp.date.now("YYYY-MM-DD HH:mm") %> - Ticket criado
